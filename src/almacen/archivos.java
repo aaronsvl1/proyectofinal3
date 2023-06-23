@@ -29,7 +29,7 @@ public class archivos {
         datos datos;
         if (verificar()){
         try { 
-            FileReader archivo = new FileReader("datos.vic");
+            FileReader archivo = new FileReader("datos.aar");
             BufferedReader br = new BufferedReader(archivo);
             while((linea = br.readLine()) != null){
                 datos = new datos();
@@ -57,7 +57,7 @@ public class archivos {
         convertir convertir = new convertir();
         boolean estado = true;
         try {
-            FileWriter archivo = new FileWriter("datos.vic");
+            FileWriter archivo = new FileWriter("datos.aar");
             BufferedWriter bw = new BufferedWriter(archivo);
             for (datos cadena : lista)
             bw.write(convertir.ajson(cadena)+"\n");
@@ -71,7 +71,7 @@ public class archivos {
         return estado;
     }
    private boolean verificar(){
-       File archivo = new File("datos.vic");
+       File archivo = new File("datos.aar");
        if (archivo.exists())
            return true;
        else
